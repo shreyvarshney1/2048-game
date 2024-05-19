@@ -95,12 +95,10 @@ const Tile: React.FC<TileProps> = ({ value, animations }) => {
         return 'bg-[#cdc1b4]';
     }
   }
-  const getFontSize = (number: any) => {
-    number = number.toString()
-  
+  const getFontSize = (value: number) => {
     let size
   
-    switch (number.length) {
+    switch (value.toString.length) {
       case 3:
         size = 3
         break

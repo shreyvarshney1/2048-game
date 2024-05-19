@@ -12,9 +12,9 @@ import Overlay from './Overlay';
 
 const Board = () => {
   const dispatch = useAppDispatch();
-  const board = useAppSelector((state: any) => state.app.board);
-  const boardSize = useAppSelector((state: any) => state.app.boardSize);
-  const animations = useAppSelector((state: any) => state.app.animations);
+  const board = useAppSelector((state) => state.app.board);
+  const boardSize = useAppSelector((state) => state.app.boardSize);
+  const animations = useAppSelector((state) => state.app.animations);
   const startPointerLocation = useRef<Point>();
   const currentPointerLocation = useRef<Point>();
 
@@ -131,10 +131,10 @@ const Board = () => {
     }
 
     const moveAnimations = animations.filter(
-      (animation: any) => animation.type === AnimationType.MOVE,
+      (animation) => animation.type === AnimationType.MOVE,
     );
     const otherAnimations = animations.filter(
-      (animation: any) => animation.type !== AnimationType.MOVE,
+      (animation) => animation.type !== AnimationType.MOVE,
     );
 
     if (moveAnimations.length > 0) {
@@ -169,7 +169,7 @@ const Board = () => {
           gridTemplateColumns: `repeat(${boardSize}, 1fr)`,
         }}
       >
-        {renderedBoard.map((value: any, i: any) => (
+        {renderedBoard.map((value: number, i) => (
           <Tile
             value={value}
             key={i}

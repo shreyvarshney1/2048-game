@@ -5,7 +5,7 @@ import { useCallback } from 'react';
 
 const Control = () => {
   const dispatch = useAppDispatch();
-  const size = useAppSelector((state: any) => state.app.boardSize);
+  const size = useAppSelector((state) => state.app.boardSize);
   const reset = useCallback(
     () => dispatch(resetAction(size)),
     [dispatch, size],
