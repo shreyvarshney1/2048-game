@@ -13,7 +13,7 @@
     "lint": "next lint",
     "format": "prettier --write --ignore-unknown .",
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install",
+    "prepare": "pnpm install",
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
     "commit": "git-cz",
     "lint-staged": "lint-staged --config lint-staged.config.cjs"
